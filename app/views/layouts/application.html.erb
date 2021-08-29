@@ -1,7 +1,8 @@
+<!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FirstRailsApp</title>
+    <title>The Spoon</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +11,8 @@
   </head>
 
   <body>
+   <h1>The Spoon</h1> <!-- Add this -->
     <%= yield %>
+    <p>A very simple footer</p>  <!-- Add this -->
   </body>
 </html>

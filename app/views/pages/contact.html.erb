@@ -1,0 +1,17 @@
+<!-- app/views/pages/contact.html.erb -->
+<p>Now is <%= Time.now %><p>
+<h2>Meet our team</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+<form action="/contact" method="get">
+  <input type="text"
+       name="member"
+       value="<%= params[:member] %>"
+       placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+<p><%= link_to "Know more about us", '/about' %></p>
+<p><%= link_to "Home", '/' %></p>
